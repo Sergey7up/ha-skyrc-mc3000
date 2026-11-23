@@ -16,7 +16,7 @@
 # CHECK YOUR ENTITY IDS before importing. These are generic example IDs using
 # the standard skyrc_mc3000 prefix, not a device address or a real household.
 # Existing registries and localized installations may use different IDs,
-# especially *_completed_cycles, *_indicator and the setting entities.
+# especially *_cycle_counter, *_indicator and the setting entities.
 # Replace the entity references and targets throughout this file. The custom
 # cards also expose entity, companion_entity and status_entities overrides;
 # status_entities is ordered slot 1, slot 2, slot 3, slot 4. Curves additionally
@@ -194,7 +194,7 @@ views:
                 name: Internal resistance
               - entity: sensor.skyrc_mc3000_slot_1_power
                 name: Power
-              - entity: sensor.skyrc_mc3000_slot_1_completed_cycles
+              - entity: sensor.skyrc_mc3000_slot_1_cycle_counter
                 name: Completed cycles
               - entity: sensor.skyrc_mc3000_slot_1_indicator
                 name: Slot indicator
@@ -323,7 +323,7 @@ views:
                 name: Internal resistance
               - entity: sensor.skyrc_mc3000_slot_2_power
                 name: Power
-              - entity: sensor.skyrc_mc3000_slot_2_completed_cycles
+              - entity: sensor.skyrc_mc3000_slot_2_cycle_counter
                 name: Completed cycles
               - entity: sensor.skyrc_mc3000_slot_2_indicator
                 name: Slot indicator
@@ -452,7 +452,7 @@ views:
                 name: Internal resistance
               - entity: sensor.skyrc_mc3000_slot_3_power
                 name: Power
-              - entity: sensor.skyrc_mc3000_slot_3_completed_cycles
+              - entity: sensor.skyrc_mc3000_slot_3_cycle_counter
                 name: Completed cycles
               - entity: sensor.skyrc_mc3000_slot_3_indicator
                 name: Slot indicator
@@ -581,7 +581,7 @@ views:
                 name: Internal resistance
               - entity: sensor.skyrc_mc3000_slot_4_power
                 name: Power
-              - entity: sensor.skyrc_mc3000_slot_4_completed_cycles
+              - entity: sensor.skyrc_mc3000_slot_4_cycle_counter
                 name: Completed cycles
               - entity: sensor.skyrc_mc3000_slot_4_indicator
                 name: Slot indicator
@@ -728,17 +728,17 @@ views:
           - type: entities
             show_header_toggle: false
             entities:
-              - entity: select.skyrc_mc3000_setting_temp_unit
+              - entity: select.skyrc_mc3000_temperature_unit
                 name: Temperature unit
-              - entity: select.skyrc_mc3000_setting_display
+              - entity: select.skyrc_mc3000_display_backlight
                 name: Display backlight
-              - entity: select.skyrc_mc3000_setting_cooling_fan
+              - entity: select.skyrc_mc3000_cooling_fan
                 name: Cooling fan
-              - entity: switch.skyrc_mc3000_setting_system_beep
+              - entity: switch.skyrc_mc3000_system_beep
                 name: System beep
-              - entity: switch.skyrc_mc3000_setting_screensaver
+              - entity: switch.skyrc_mc3000_screensaver
                 name: Screensaver
-              - entity: number.skyrc_mc3000_setting_input_voltage_cutoff
+              - entity: number.skyrc_mc3000_input_voltage_cutoff
                 name: Input voltage cutoff
             grid_options:
               columns: full
